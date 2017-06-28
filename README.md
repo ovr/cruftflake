@@ -3,6 +3,14 @@
 A stab at a version of [Twitter Snowflake](https://github.com/twitter/snowflake)
 but in PHP with a simple ZeroMQ interface (rather than Thrift).
 
+# Docker
+
+Build new docker container:
+
+```
+docker build -t interpalsnet/cruftflake:latest .
+```
+
 ## Implementation
 
 This project was motivated by personal curiosity and also my [inability to

@@ -17,6 +17,6 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENTRYPOINT php /usr/src/app/scripts/cruftflake.php -u tcp://127.0.0.1:5599 -m `echo %H | cksum | cut -c 1-3`
+ENTRYPOINT php /usr/src/app/scripts/cruftflake.php -u tcp://0.0.0.0:5599 -m `echo %H | cksum | cut -c 1-3`
 
 EXPOSE 5599

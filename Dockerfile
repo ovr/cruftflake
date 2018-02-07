@@ -1,5 +1,5 @@
 
-FROM php:7.1.6-cli
+FROM php:7.2.2-cli
 
 MAINTAINER Patsura Dmitry <talk@dmtry.me>
 
@@ -11,7 +11,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         ca-certificates \
         zlib1g-dev \
-        libzmq-dev \
+        libzmq3-dev \
     && pecl install zmq-beta \
     && docker-php-ext-enable zmq \
     && apt-get clean \

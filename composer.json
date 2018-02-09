@@ -1,0 +1,14 @@
+{
+    "name": "interpals/cruftflake",
+    "description": "A stab at a version of Twitter Snowflake but in PHP with a simple ZeroMQ interface",
+    "license": "MIT",
+    "authors": [],
+    "bin": [
+        "scripts/cruftflake.php"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Davegardnerisme\\CruftFlake\\": "src/Davegardnerisme/CruftFlake"
+        }
+    }
+}

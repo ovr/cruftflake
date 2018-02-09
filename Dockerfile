@@ -17,6 +17,10 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+    && rm -rf vendor/ composer.lock \
+    && composer install -o;
+
 ENTRYPOINT php /usr/src/app/scripts/cruftflake.php -u tcp://0.0.0.0:5599 -m `echo %H | cksum | cut -c 1-3`
 
 EXPOSE 5599
